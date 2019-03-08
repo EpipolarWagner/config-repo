@@ -11,7 +11,7 @@
 
 ! === rofi ===
 
-rofi.modi:                           ssh,window,drun,run
+rofi.modi:                           window,drun,run
 rofi.sidebar-mode:                   true
 rofi.terminal:                       termite
 rofi.ssh-client:                     ssh
