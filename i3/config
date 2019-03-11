@@ -196,13 +196,13 @@ bar {
 #exec_always --no-startup-id /$HOME/.config/polybar/i3wmthemer_bar_launch.sh
 
 # #bind media keys sound
-# bindsym $mod+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
-# bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
+ bindsym $mod+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
+ bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse set Master 5%+ unmute 
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse set Master 5%- unmute 
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle
-# bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec +5%# & killall -USR1 i3status
-# bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc +5% # & killall -USR1 i3status
+ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec +5%# & killall -USR1 i3status
+ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc +5% # & killall -USR1 i3status
 
 #
 exec_always amixer set Master mute
@@ -224,12 +224,12 @@ client.urgent           #525f6b #00FF00 #000000 #FFFFFF
 #client.placeholder     #000000 #ea0016 #ffffff #000000
 
 #two finger tap <=> middle click
-#exec_always --no-startup-id synclient TapButton2=2
+exec_always --no-startup-id synclient TapButton2=2
 
 #natural scrolling
-#exec_always --no-startup-id synclient VertScrollDelta=-95
-#exec_always --no-startup-id synclient HorizScrollDelta=-95
-#exec_always --no-startup-id synclient HorizTwoFingerScroll=1
+exec_always --no-startup-id synclient VertScrollDelta=-95
+exec_always --no-startup-id synclient HorizScrollDelta=-95
+exec_always --no-startup-id synclient HorizTwoFingerScroll=1
  
 #toggle eDP1-HDM1
 #exec_always --no-startup-id bash ~/.i3/screentoggle
@@ -244,12 +244,12 @@ exec_always --no-startup-id xset s off
 exec_always --no-startup-id numlockx on
 
 #block bluetooht by default
-#exec_always --no-startup-id rfkill block bluetooth
-#bindsym $mod+b exec "rfkill unblock bluetooth && bluetooth-wizard"
+exec_always --no-startup-id rfkill block bluetooth
+bindsym $mod+b exec "rfkill unblock bluetooth && bluetooth-wizard"
 
 
 #powersettings
-#exec_always sudo powertop --auto-tune
+exec_always sudo powertop --auto-tune
 
 # stop nautilus from starting desktop
 exec_always gsettings set org.gnome.desktop.background show-desktop-icons false
@@ -274,5 +274,5 @@ exec_always feh --bg-scale ~/Documents/corporate_design/BOSCH_Pattern_CMYK_GREY_
 
 
 
-exec feh --bg-scale ~/Documents/corporate_design/BOSCH_Pattern_CMYK_GREY_RGB_MONO/RGB/BOSCH\ SUPERGRAPHIC\ 4K\ RGB\ UPRIGHT.png  ~/Documents/corporate_design/BOSCH_Pattern_CMYK_GREY_RGB_MONO/RGB/BOSCH\ SUPERGRAPHIC\ 4K\ RGB.png
+exec_always feh --bg-scale ~/Documents/corporate_design/BOSCH_Pattern_CMYK_GREY_RGB_MONO/RGB/BOSCH\ SUPERGRAPHIC\ 4K\ RGB\ UPRIGHT.png  ~/Documents/corporate_design/BOSCH_Pattern_CMYK_GREY_RGB_MONO/RGB/BOSCH\ SUPERGRAPHIC\ 4K\ RGB.png
 

@@ -3,7 +3,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/wga2hi/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 export EDITOR='emacs -nw -l ~/.emacs_nw'
 
 # Set name of the theme to load --- if set to "random", it will
@@ -146,10 +146,14 @@ alias -s {m}=matlab
 HISTCONTROL=ignoreboth
 
 # enable programmable completion features (you don't need to enable
-
-source /opt/aec/scripts/bashrc
+if [ -d /opt/ros/kinetic/setup.zsh ]; then
+    source /opt/ros/kinetic/setup.zsh
+fi    
 export PATH=$HOME/tools/simple_repository_manager:${PATH}
-source /opt/ros/kinetic/setup.zsh
+if [ -d /opt/ros/kinetic/setup.zsh ]; then
+    source /opt/ros/kinetic/setup.zsh
+fi
+
 
 alias ll='ls -alF'
 alias la='ls -A'
