@@ -40,10 +40,10 @@ bindsym $mod+q kill
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -m -1  -i -dmenu -font "ubuntu 12" -bg "#222222" -fg "#dddddd" -hlbg "#285577" -hlfg "#ffffff" -location 0 -hide-scrollbar true -sort -sortingg-method fzf -disable-history'
-bindsym $mod+d exec --no-startup-id rofi -show drun -m -1 -theme sidetab_my -font "ubuntu 12" -no-levenshtein-sort -terminal gnome-terminal
+bindsym $mod+d exec --no-startup-id rofi -show drun -m -1 -theme sidetab_my -font "ubuntu 13" -no-levenshtein-sort -terminal gnome-terminal
 
 #ROFI WINDOW SWITCHER
-bindsym $mod+Tab exec rofi -show window -m -1 -theme sidetab_my -font "ubuntu 12" -no-levenshtein-sort -terminal gnome-terminal
+bindsym $mod+Tab exec rofi -show window -m -1 -theme sidetab_my -font "ubuntu 13" -no-levenshtein-sort -terminal gnome-terminal
 # -sort -sortingg-method fzf
 
 
