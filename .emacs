@@ -19,6 +19,13 @@
 ;;  ;; If there is more than one, they won't work right.
 ;;  )
 
+ 	
+
+(load "auctex.el" nil t t)
+;;(load "preview-latex.el" nil t t)
+
+
+
 ;; CUA Mode
 (cua-mode t)
     (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
@@ -123,3 +130,7 @@
 ;;  ;; Your init file should contain only one such instance.
 ;;  ;; If there is more than one, they won't work right.
 ;;   '(default ((t (:family "Inconsolata")))))
+
+;; Macaulay 2 start
+(load "~/.emacs-Macaulay2" t)
+;; Macaulay 2 end
