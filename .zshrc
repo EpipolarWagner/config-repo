@@ -5,6 +5,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/$USER/.oh-my-zsh"
 export EDITOR='emacs -nw -l ~/.emacs_nw'
+#export PYTHONPATH='/home/wga2hi/projects/boschCVTools/rendertools'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,6 +115,10 @@ alias octave='octave --no-gui'
 alias ..='cd ..'
 alias matlab='~/software/matlab/bin/matlab'
 alias -s {m}=matlab
+alias blender='/home/wga2hi/software/blender/blender'
+alias trash='gio trash'
+#alias viewEXR='python /home/wga2hi/projects/2019_01_07_windscreen_proj/create_luts_blender_colorcoded/python_interpolation/viewEXR.py'
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -159,21 +164,42 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-export GOPATH=$HOME/go
 
-#function powerline_precmd() {
+function p2c (){
+    readlink -e $1 | xclip -selection clipboard
+}				
+
+
+# function powerline_precmd() {
 #    PS1="$(~/software/go/bin/powerline-go -error $? -shell zsh)" 
-#}
+# }
 
-#function install_powerline_precmd() {
+# function install_powerline_precmd() {
 #    for s in "${precmd_functions[@]}"; do
-#	if [ "$s" = "powerline_precmd" ]; then
-#	    return
-#	fi
+# 	if [ "$s" = "powerline_precmd" ]; then
+# 	    return
+# 	fi
 #    done
 #    precmd_functions+=(powerline_precmd)
-#}
+# }
 
 #if [ "$TERM" != "linux" ]; then
 #    install_powerline_precmd
 #fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/wga2hi/software/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/wga2hi/software/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/wga2hi/software/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/wga2hi/software/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+eval 'conda activate default_env'
